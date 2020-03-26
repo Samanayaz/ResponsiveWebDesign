@@ -1,0 +1,90 @@
+/*  CSS has several options for how to align it with the text-align property.
+
+text-align: justify; causes all lines of text except the last line to meet the left and right edges of the line box.
+
+text-align: center; centers the text
+
+text-align: right; right-aligns the text
+
+And text-align: left; (the default) left-aligns the text. */
+
+<style>
+  h4 {
+  text-align: center;
+  }
+  p {
+    text-align: justify;
+  }
+
+  /* .....................hr................... */
+  /*  use the hr tag to add a horizontal line across the width of its containing element.(done in html) */
+
+
+  /* ...........position.......... */
+  /* When the position of an element is set to relative, it allows you to specify how CSS should move it relative to its current position in the normal flow of the page. It pairs with the CSS offset properties of left or right, and top or bottom */
+  p {
+    position: relative;
+    bottom: 10px;
+  }
+  /* CSS position property is absolute, which locks the element in place relative to its parent container. A relative position, this removes the element from the normal flow of the document, so surrounding items ignore it.*/
+  /* similar to absolute,  the fixed position which is a type of absolute positioning that locks an element relative to the browser window */
+
+  /* .........Float......... */
+  /* the float property of an element. Floating elements are removed from the normal flow of a document and pushed to either the left or right of their containing parent element. It's commonly used with the width property to specify how much horizontal space the floated element requires.v
+
+ */
+
+ #left {
+    float:left;
+          width: 50%;
+        }
+        #right {
+    float:right;
+          width: 40%;
+        }
+
+    /* ..........z-index......... */
+    /* the z-index property can specify the order of how elements are stacked on top of one another.  */
+
+    .first {
+        background-color: red;
+        position: absolute;
+        z-index: 2;
+    
+      }
+      .second {
+        background-color: blue;
+        position: absolute;
+        left: 40px;
+        top: 50px;
+        z-index: 1;
+      }
+
+      /* ...........\\\\\\\\\\\TRANSFORM////........... */
+      /* The transform property has a variety of functions that let you scale, move, rotate, skew, etc., your elements. When used with pseudo-classes such as :hover that specify a certain state of an element, the transform property can easily add interactivity to your elements. */
+
+
+      /* .........scale.............. */
+      /* Here's an example to scale the paragraph elements to 2.1 times their original size when a user hovers over them: */
+
+     p:hover {
+     transform: scale(2.1);
+    }
+
+    /* ............skewX............. */
+    /* The next function of the transform property is skewX(), which skews the selected element along its X (horizontal) axis by a given degree. */
+
+    #bottom {
+        background-color: blue;
+        transform: skewX(24deg);
+      }
+
+/* ...............skewY.............. */
+/* it is no surprise that the skewY() property skews an element along the Y (vertical) axis. */
+
+#top {
+    background-color: red;
+  transform:skewY(-10deg);
+  }
+
+
